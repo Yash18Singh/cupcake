@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+.App{
+  display:flex;
+  flex-direction: column;
+  margin-bottom:0px;
+  height:100%;
+  width:100%;
+  font-family: 'Original Surfer', cursive;
+}
+
+
+.underline{
+  margin-top:50px;
+  margin-bottom:50px;
+  border: 1px solid black;
+  width:70%;
+  margin:auto auto;
+}
+
+
+
+
+/* HEADER */
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding:1% 2%;
+  align-items: center;
+}
+.header > img{
+  width:70px;
+  height:70px;
+}
+
+.header__options{
+  display:flex;
+  gap:60px;
+  font-size:18px;
+  font-weight:500;
+}
+.header__options > p{
+  cursor: pointer;
+}
+
+.header__logo{
+  display:flex;
+  gap:50px;
+}
+.header__logo > img{
+  height:30px;
+  width:25px;
+}
+.header__mobile{
+  display: none;
+}
+
+@media only screen and (max-width: 775px) {
+  .header__options{
+    display:flex;
+    gap:20px;
+    font-size:16px;
+    font-weight:500;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .header{
+    display:none;
+  }
+
+  .header__mobile{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .header__mobile__upper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:3% 5%;
+    align-items: center;
+  }
+  .header__mobile__upper > img{
+    width:60px;
+  }
+  .mobile__upperIcon{
+    font-size:25px;
+    cursor: pointer;
+  }
+  .header__mobile__lower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+  .header__mobile__lower > p{
+    font-size:18px;
+    font-weight:500;
+    border-bottom:1px solid rgba(0, 0, 0, 0.425);
+    width:100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* HERO COMPONENT */
+.hero{
+  display: flex;
+  gap:10%;
+  justify-content: space-between;
+  padding:5% 5%;
+  align-items: center;
+}
+.hero__left{
+  width:60%;
+  display: flex;
+  flex-direction: column;
+}
+.hero__left__head{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #fa67ee, #ffc480);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    font-size:80px;
+    filter:drop-shadow(0px 1px 2px rgb(0, 0, 0))
+}
+
+.hero__left > p{
+  width:60%;
+  font-size: 20px;
+  font-weight:500;
+}
+
+.hero__left__contact{
+  display: flex;
+  justify-content: space-between;
+  width:60%;
+  margin-top:20px;
+  align-items: center;
+}
+
+.button{
+  font-size: 18px;
+  font-weight: 600;
+  color:white;
+  background-color: black;
+  cursor: pointer;
+  font-family: 'Original Surfer', cursive;
+}
+
+.order{
+  width:40%;
+  height:50px;
+}
+
+.hero__left__contact > div{
+  display:flex;
+  gap:10px;
+  align-items: center;
+  font-size:25px;
+  color:#fa67ee;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hero__right{
+  width:40%;
+}
+.hero__right > img{
+  width:90%;
+  filter:drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.397));
+}
+
+
+
+/* SPECIAL EVENTS & FESTIVALS */
+.special{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding:4% 4%;
+}
+.special > h1{
+  font-size:60px;
+}
+.special__items_list{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
+  margin:auto auto;
+}
+
+.special__items{
+  display:flex;
+  flex-direction: column;
+  padding:10px;
+  margin-top:20px;
+  cursor: pointer;
+}
+.special__items > img:hover{
+  transform:scale(1.1);
+  transition: 0.3s ease-out;
+}
+.special__items > img{
+  height:300px;
+  border-radius:10px;
+}
+.special__items > p{
+  font-size:18px;
+  font-weight:700;
+}
+
+
+/* INDIVIDUAL ITEMS */
+.individual{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  justify-content: center;
+  align-items: center;
+  margin-top:50px;
+}
+.individual > h1{
+  font-size: 60px;
+}
+
+.individual__items{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.individual_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:10px 10px;
+}
+.individual_item:hover{
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.432);
+  border-radius:20px;
+  cursor: pointer;
+  transition:0.3s ease-in;
+}
+
+.individual_item > img{
+  width:150px;
+  height:200px;
+}
+.individual_item > p{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 650;
+  height:50px;
+}
+.individual_item > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:70%;
+  height:40px;
+  align-items: center;
+}
+.individual_item > div > p{
+  font-size: 17px;
+  font-weight: 500;
+  color:#fa67ee;
+}
+
+.item__quantity{
+  display: flex;
+  align-items: center;
+}
+.item__quantity > div{
+  width:20px;
+  border: 1px solid black;
+  height:20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.individual__button{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width:60%;
+  height:50px;
+}
+
+.dozen__poster{
+  margin-top: 100px;
+  cursor: pointer;
+  width:80%;
+  margin-bottom:50px;
+}
+.dozen__poster > img{
+  width: 100%;
+}
+
+
+
+
+
+/* NEWS LETTER */
+.news{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.news > h1{
+  font-size: 60px;
+}
+
+.news > div{
+  display: flex;
+  gap:1%;
+  width: 100%;
+  justify-content: center;
+  margin-bottom:100px;
+}
+.news > div > input{
+  height:60px;
+  width:30%;
+  padding:0px 20px;
+  font-size:20px;
+}
+.news > div > button{
+  width:12%;
+  font-size: 20px;
+}
+
+
+
+
+/* FOOTER */
+.footer{
+  display: flex;
+  flex-direction: row;
+  gap:5%;
+  background-color: black;
+  padding:20px 100px;
+  color:white;
+  flex:1;
+}
+.footer div > p{
+  font-size:18px;
+  font-weight: 600;
+}
+.footer > div{
+  flex:0.25;
+}
+
+.footer_3{
+  display: flex;
+  flex-direction: column;
+   gap:20px;
+}
+.footer_3 > img{
+  height:40px;
+  width:40px;
+}
